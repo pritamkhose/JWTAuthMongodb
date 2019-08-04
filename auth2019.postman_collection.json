@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "d9b98bb5-757c-412d-9f10-2b078f857661",
+		"name": "auth2019",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/users/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \t\"username\":\"priya1\",\r\n    \"email\":\"priya1@gmail.com\",\r\n    \"password\":\"priya1\"\r\n}"
+				},
+				"url": "http://localhost:3000/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"email\": \"priya@gmail.com\",\r\n    \"password\": \"priya\"\r\n}"
+				},
+				"url": "http://localhost:3000/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/forgotPassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \t\"username\":\"priya\",\r\n    \"email\":\"priya@gmail.com\"\r\n}"
+				},
+				"url": "http://localhost:3000/users/forgotPassword"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/setNewPassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \t\"username\": \"priya\",\r\n    \"email\": \"priya@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"resetcode\": 352125\r\n}"
+				},
+				"url": "http://localhost:3000/users/setNewPassword"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/current",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InByaXlhQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoicHJpeWEiLCJpZCI6IjVkNDY3NWFlMmRkYTI5MzY1OGI3MmRlYyIsImV4cCI6MTU3MDA4MzI5MSwiaWF0IjoxNTY0ODk5MjkxfQ.SOzF2JLVN1RSprnSXSQocB_CP3y-XuRRkN0mYsitMHE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:3000/users/current"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/users"
+			},
+			"response": []
+		}
+	]
+}
