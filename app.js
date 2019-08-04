@@ -34,8 +34,8 @@ app.use(bodyParser.json());
 app.use(session({ secret: 'passport-tutorial', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
 
 //Configure Mongoose
-// mongoose.connect('mongodb://localhost/passport-tutorial');
-mongoose.connect('mongodb://pritam:pritam@cluster0-shard-00-00-qhmqk.mongodb.net:27017,cluster0-shard-00-01-qhmqk.mongodb.net:27017,cluster0-shard-00-02-qhmqk.mongodb.net:27017/my_db?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true');
+// mongoose.connect('mongodb://localhost/mongodb_database_name');
+mongoose.connect('mongodb://mongodb_username:mongodb_password@cluster0-shard-00-00-qhmqk.mongodb.net:27017,cluster0-shard-00-01-qhmqk.mongodb.net:27017,cluster0-shard-00-02-qhmqk.mongodb.net:27017/mongodb_database_name?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true');
 mongoose.set('debug', true);
 
 //Models & routes
